@@ -1,7 +1,10 @@
-module ProjectEuler.Problem001Spec (spec) where
+module ProjectEuler.Problem001Spec (main, spec) where
 
 import Test.Hspec
 import ProjectEuler.Problem001
+
+main :: IO ()
+main = hspec spec
 
 spec :: Spec
 spec =
