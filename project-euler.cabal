@@ -15,6 +15,7 @@ cabal-version:       >= 1.10
 library
   hs-source-dirs:      src
   exposed-modules:     ProjectEuler.Problem001
+                     , ProjectEuler.Problem002
   build-depends:       base >= 4.7 && < 5
                      , matrix
                      , primes
