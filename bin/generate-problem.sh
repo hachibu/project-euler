@@ -29,7 +29,7 @@ fi
 file_template="module ${module} (solve) where
 
 solve :: Integer
-solve = 0"
+solve = ${num}"
 
 test_template="module ${module}Spec (main, spec) where
 
@@ -42,10 +42,9 @@ main = hspec spec
 spec :: Spec
 spec =
   describe \"solve\" $
-    it \"returns 0\" $
-      solve \`shouldBe\` 0"
+    it \"returns ${num}\" $
+      solve \`shouldBe\` ${num}"
 
 echo "$file_template" > "$filepath"
 echo "$test_template" > "$testpath"
-
 echo "Add ${module} to exposed-modules in project-euler.cabal"
