@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 die() {
-  echo "$@"; exit 1
+  echo "error:" "$@"; exit 1
 }
 
 if [ "$#" -ne 1 ]; then
-  die "error: missing number"
+  die "missing number argument"
 fi
 
 if ! [[ $1 =~ ^[0-9]+$ ]]; then
-  die "error: not a number"
+  die "$1 is not a number"
 fi
 
 num=$(printf "%03d\n" "$1")
@@ -19,11 +19,11 @@ filepath="src/ProjectEuler/${filename}.hs"
 testpath="test/ProjectEuler/${filename}Spec.hs"
 
 if [[ -f "$filepath" ]]; then
-  die "error: $filepath exists"
+  die "$filepath exists"
 fi
 
 if [[ -f "$testpath" ]]; then
-  die "error: $testpath exists"
+  die "$testpath exists"
 fi
 
 file_template="module ${module} (solve) where
