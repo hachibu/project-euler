@@ -17,6 +17,7 @@ library
   exposed-modules:     ProjectEuler.Problem001
                      , ProjectEuler.Problem002
                      , ProjectEuler.Problem003
+                     , ProjectEuler.Problem004
   build-depends:       base >= 4.7 && < 5
                      , matrix
                      , primes
