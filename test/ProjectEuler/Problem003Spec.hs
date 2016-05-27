@@ -9,5 +9,5 @@ main = hspec spec
 spec :: Spec
 spec = parallel $
   describe "solve" $
-    it "finds the largest prime factor of 600,851,475,143" $
+    it "finds the largest prime factor of 600851475143" $
       solve 600851475143 `shouldBe` 6857

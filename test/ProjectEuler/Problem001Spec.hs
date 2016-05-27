@@ -9,5 +9,5 @@ main = hspec spec
 spec :: Spec
 spec = parallel $
   describe "solve" $
-    it "finds the sum of all multiples of 3 or 5 below 1,000" $
+    it "finds the sum of all multiples of 3 or 5 below 1000" $
       solve 1000 `shouldBe` 233168
