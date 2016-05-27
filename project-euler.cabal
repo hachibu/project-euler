@@ -19,6 +19,7 @@ library
                      , ProjectEuler.Problem003
                      , ProjectEuler.Problem004
                      , ProjectEuler.Problem005
+                     , ProjectEuler.Problem006
   build-depends:       base >= 4.7 && < 5
                      , matrix
                      , primes
