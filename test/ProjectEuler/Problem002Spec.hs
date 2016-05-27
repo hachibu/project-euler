@@ -7,7 +7,7 @@ main :: IO ()
 main = hspec spec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "fibs" $
     it "generates the first 10 Fibonacci numbers" $
       fibs 10 `shouldBe` [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]

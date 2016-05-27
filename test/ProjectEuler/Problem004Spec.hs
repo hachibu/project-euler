@@ -7,7 +7,7 @@ main :: IO ()
 main = hspec spec
 
 spec :: Spec
-spec =
+spec = parallel $
   describe "solve" $
     it "finds the largest palindrome product of two 3-digit numbers" $
       solve 3 `shouldBe` 906609

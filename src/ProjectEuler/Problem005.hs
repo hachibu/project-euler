@@ -7,4 +7,4 @@ divByAll :: Integer -> [Integer] -> Bool
 divByAll n = all (divBy n)
 
 solve :: Integer
-solve = head $ filter (`divByAll` [11..20]) [2,4..]
+solve = head $ filter (`divByAll` [11..20]) [4,8..]

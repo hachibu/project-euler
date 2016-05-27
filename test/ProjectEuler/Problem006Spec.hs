@@ -7,7 +7,7 @@ main :: IO ()
 main = hspec spec
 
 spec :: Spec
-spec =
+spec = parallel $
   describe "solve" $
     it "finds the sum square difference for 1 through 100" $
       solve [1..100] `shouldBe` 25164150

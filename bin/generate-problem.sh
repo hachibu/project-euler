@@ -40,7 +40,7 @@ main :: IO ()
 main = hspec spec
 
 spec :: Spec
-spec =
+spec = parallel $
   describe \"solve\" $
     it \"returns ${num}\" $
       solve \`shouldBe\` ${num}"

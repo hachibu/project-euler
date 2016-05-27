@@ -7,7 +7,7 @@ main :: IO ()
 main = hspec spec
 
 spec :: Spec
-spec =
+spec = parallel $
   describe "solve" $
     it "finds the smallest positive number divisible by 1 through 20" $
       solve `shouldBe` 232792560
