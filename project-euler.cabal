@@ -24,10 +24,12 @@ library
                      , ProjectEuler.Problem008
                      , ProjectEuler.Problem009
                      , ProjectEuler.Problem010
+                     , ProjectEuler.Problem011
   build-depends:       base >= 4.7 && < 5
                      , matrix
                      , parallel
                      , primes
+                     , vector
   ghc-options:         -Wall -Werror -O -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 
