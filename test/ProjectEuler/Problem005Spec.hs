@@ -10,4 +10,4 @@ spec :: Spec
 spec = parallel $
   describe "solve" $
     it "finds the smallest positive number divisible by 1 through 20" $
-      solve `shouldBe` 232792560
+      solve 20 `shouldBe` 232792560

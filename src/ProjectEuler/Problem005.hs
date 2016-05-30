@@ -1,10 +1,11 @@
 module ProjectEuler.Problem005 (solve) where
 
-divBy :: Integer -> Integer -> Bool
-divBy n m = n `mod` m == 0
+import Data.Numbers.Primes
 
-divByAll :: Integer -> [Integer] -> Bool
-divByAll n = all (divBy n)
-
-solve :: Integer
-solve = head $ filter (`divByAll` [11..20]) [4,8..]
+solve :: Integer -> Integer
+solve n
+  = product 
+  $ concatMap (\y -> maximum $ (map . filter) (== y) xs) ys
+  where
+    xs = map primeFactors [2..n]
+    ys = takeWhile (< n) primes
