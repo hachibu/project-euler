@@ -1,3 +1,5 @@
+![](https://projecteuler.net/profile/hachibu.png)
+
 Setup
 -----
 
