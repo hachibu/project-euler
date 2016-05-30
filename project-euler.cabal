@@ -31,6 +31,7 @@ library
                      , ProjectEuler.Problem011
                      , ProjectEuler.Problem012
                      , ProjectEuler.Problem013
+                     , ProjectEuler.Problem014
   build-depends:       base >= 4.7 && < 5
                      , matrix
                      , parallel
