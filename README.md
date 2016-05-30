@@ -8,3 +8,4 @@ Development
 -----------
 
     stack test --file-watch
+    stack test --profile --executable-profiling --library-profiling
