@@ -18,7 +18,8 @@ source-repository head
 
 library
   hs-source-dirs:      src
-  exposed-modules:     ProjectEuler.Problem001
+  exposed-modules:     ProjectEuler.Prelude
+                     , ProjectEuler.Problem001
                      , ProjectEuler.Problem002
                      , ProjectEuler.Problem003
                      , ProjectEuler.Problem004
@@ -36,6 +37,7 @@ library
                      , ProjectEuler.Problem016
                      , ProjectEuler.Problem017
                      , ProjectEuler.Problem019
+                     , ProjectEuler.Problem020
   build-depends:       base
                      , matrix
                      , parallel
