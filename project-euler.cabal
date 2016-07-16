@@ -38,6 +38,7 @@ library
                      , ProjectEuler.Problem017
                      , ProjectEuler.Problem019
                      , ProjectEuler.Problem020
+                     , ProjectEuler.Problem021
   build-depends:       base
                      , matrix
                      , parallel
