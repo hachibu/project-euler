@@ -1,13 +1,13 @@
 name:                project-euler
 version:             0.1.0.0
 synopsis:            Project Euler
-description:         Please see README.md
+description:         Please see README.
 homepage:            https://github.com/hachibu/project-euler#readme
 license:             MIT
 license-file:        LICENSE
-author:              Ray Sohn
-maintainer:          raymondsohn@example.com
-copyright:           2016 Ray Sohn
+author:              hachibu
+maintainer:          hachibu <raymondsohn@example.com>
+copyright:           2018 hachibu
 category:            Math
 build-type:          Simple
 cabal-version:       >= 1.10
@@ -47,16 +47,38 @@ library
                      , primes
                      , time
                      , vector
-  ghc-options:         -Wall -Werror -O2 -threaded -rtsopts -with-rtsopts=-N
+  ghc-options:         -Wall -Werror -O2
   default-language:    Haskell2010
 
 test-suite project-euler-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
+  other-modules:       ProjectEuler.Problem001Spec
+                     , ProjectEuler.Problem002Spec
+                     , ProjectEuler.Problem003Spec
+                     , ProjectEuler.Problem004Spec
+                     , ProjectEuler.Problem005Spec
+                     , ProjectEuler.Problem006Spec
+                     , ProjectEuler.Problem007Spec
+                     , ProjectEuler.Problem008Spec
+                     , ProjectEuler.Problem009Spec
+                     , ProjectEuler.Problem010Spec
+                     , ProjectEuler.Problem011Spec
+                     , ProjectEuler.Problem012Spec
+                     , ProjectEuler.Problem013Spec
+                     , ProjectEuler.Problem014Spec
+                     , ProjectEuler.Problem015Spec
+                     , ProjectEuler.Problem016Spec
+                     , ProjectEuler.Problem017Spec
+                     , ProjectEuler.Problem019Spec
+                     , ProjectEuler.Problem020Spec
+                     , ProjectEuler.Problem021Spec
+                     , ProjectEuler.Problem022Spec
+                     , ProjectEuler.Problem024Spec
   build-depends:       base
                      , project-euler
                      , hspec
                      , QuickCheck
-  ghc-options:         -Wall -Werror -O2 -threaded -rtsopts -with-rtsopts=-N
+  ghc-options:         -Wall -Werror -O2
   default-language:    Haskell2010

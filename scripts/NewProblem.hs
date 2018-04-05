@@ -1,5 +1,3 @@
-#!/usr/bin/env runhaskell
-
 module Main (main) where
 
 import Control.Monad
@@ -48,39 +46,24 @@ main :: IO ()
 main = do
   args <- getArgs
 
-  when (null args) (die "missing number argument")
+  when (null args) (die "Number argument missing.")
 
   let a = head args
       m = readMaybe a :: Maybe Int
 
-  when (isNothing m) (die $ "%s is not a number" % a)
+  when (isNothing m) (die $ "%s is not a number." % a)
 
   let number     = "%03d"                        % fromJust m
       filename   = "Problem%s"                   % number
       modulename = "ProjectEuler.%s"             % filename
-      moduleline = "                     , %s"   % modulename
       cabalpath  = "project-euler.cabal"
       filepath   = "src/ProjectEuler/%s.hs"      % filename
       testpath   = "test/ProjectEuler/%sSpec.hs" % filename
       files      = [(filepath, fileTemplate), (testpath, testTemplate)]
 
   forM_ files (\(path, template) -> do
-    fileExists <- doesFileExist path 
-    when fileExists (die $ "%s exists" % path)
-    printf "creating %s..." path
     writeFile path (template modulename number)
-    printf "done\n")
+    printf "Created %s.\n" path)
 
-  xs <- fmap lines (readFile cabalpath)
-
-  let p  = "ProjectEuler.Problem"
-      m' = findIndex (isInfixOf p) (reverse xs)
-
-  when (isNothing m') (die $ "pattern not found: %s" % p)
-
-  let i  = length xs - fromJust m'
-      ys = unlines $ insertAtIndex i moduleline xs
-  
-  printf "updating %s..." cabalpath
-  writeFile cabalpath ys
-  printf "done\n"
+  printf $ "Add %s to library.exposed-modules.\n" % modulename
+  printf $ "Add %sSpec to test-suite.other-modules.\n" % modulename

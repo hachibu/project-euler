@@ -42,9 +42,9 @@ grid = fromList 20 20 [
 coordinates :: [(Int, Int, Int, Int)]
 coordinates
   = sort 
-  $ concatMap (zipWith (curry flatten) seed . replicate 20) seed
+  $ concatMap (zipWith (curry flatten') seed . replicate 20) seed
   where
-    flatten ((a, b), (c, d)) = (a, b, c, d)
+    flatten' ((a, b), (c, d)) = (a, b, c, d)
     seed = unfoldr (\(a, b) -> if b > 20
                                then Nothing
                                else Just ((a, b), (a + 1, b + 1))) (1, 4)
