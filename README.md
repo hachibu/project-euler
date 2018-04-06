@@ -18,9 +18,13 @@
 
     stack test
 
-### Run and Watch Test
+### Run 1 Test
 
-    stack test --test-arguments "-m Problem022" --file-watch
+    stack test --test-arguments "-m Problem001"
+
+### Run And Watch 1 Test
+
+    stack test --test-arguments "-m Problem001" --file-watch
 
 ## Development
 
