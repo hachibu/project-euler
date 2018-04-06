@@ -20,11 +20,11 @@
 
 ### Run 1 Test
 
-    stack test --test-arguments "-m Problem001"
+    stack test --ta "-m 001"
 
 ### Run And Watch 1 Test
 
-    stack test --test-arguments "-m Problem001" --file-watch
+    stack test --ta "-m 001" --file-watch
 
 ## Development
 

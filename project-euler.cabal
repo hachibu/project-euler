@@ -41,6 +41,7 @@ library
                      , ProjectEuler.Problem021
                      , ProjectEuler.Problem022
                      , ProjectEuler.Problem024
+                     , ProjectEuler.Problem048
   build-depends:       base
                      , matrix
                      , parallel
@@ -76,6 +77,7 @@ test-suite project-euler-test
                      , ProjectEuler.Problem021Spec
                      , ProjectEuler.Problem022Spec
                      , ProjectEuler.Problem024Spec
+                     , ProjectEuler.Problem048Spec
   build-depends:       base
                      , project-euler
                      , hspec
