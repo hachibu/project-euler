@@ -8,7 +8,7 @@ isWhole n = (denominator . toRational) n == 1
 
 solveM :: (Int, Int) -> Maybe Int
 solveM (x, y)
-  | isWhole m = Just $ floor m
+  | isWhole m = Just $ floor (m :: Double)
   | otherwise = Nothing
   where 
     a = fromIntegral x
